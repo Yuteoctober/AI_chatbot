@@ -120,7 +120,7 @@ export default function Chatbot() {
         </div>
 
         {/* Chat Container */}
-        <div className="chat_container flex-1 relative bg-white p-2 overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200"
+        <div className="chat_container flex-1 relative bg-white p-2 overflow-x-hidden overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col gap-4 text-start touch-auto">
@@ -135,7 +135,7 @@ export default function Chatbot() {
                       <span className="font-bold text-xs">AI Assistant</span>
                     </div>
                   )}
-                  <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                  <p className="text-sm" style={{ whiteSpace: 'pre-wrap' }}>{message.content}</p>
                 </div>
               </div>
             ))}
