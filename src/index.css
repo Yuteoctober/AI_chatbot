@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+@font-face {
+  font-family: 'win95';
+  src: url('../src/assets/win95.ttf') format('truetype');
+}
+
 #root, html {
   height: 100svh;
   overflow-y: hidden;
@@ -8,22 +14,9 @@
   background: #008080;
 }
 
-@font-face {
-  font-family: "MS Sans Serif";
-  src: url("https://unpkg.com/98.css@0.1.17/dist/ms_sans_serif.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MS Sans Serif";
-  src: url("https://unpkg.com/98.css@0.1.17/dist/ms_sans_serif_bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
 
 body {
-  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-family: "win95", Arial, sans-serif;
   font-size: 12px;
 }
 
