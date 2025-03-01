@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/FE_Chatbot/"
+  base: "/AI_Chatbot/"
 })
