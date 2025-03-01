@@ -98,8 +98,8 @@ export default function Chatbot() {
   console.log(messages)
 
   return (
-    <div className="flex justify-center items-center w-[100svw] mt-[1px]">
-      <div className="w-[99.5svw] h-[99.5svh] flex flex-col border-2 border-gray-700 shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]">
+    <div className="flex justify-center items-center w-[100svw] h-[100svh]">
+      <div className="w-full h-full flex flex-col border-2 border-gray-700 shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]">
         {/* Windows 95 Title Bar */}
         <div className="flex items-center  bg-[#000080] text-white px-1 py-0.5">
           <div className="flex items-center gap-1">
