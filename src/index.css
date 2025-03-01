@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: 'win95';
   src: url('../src/assets/win95.ttf') format('truetype');
 }
 
 #root, html {
-  height: 100svh;
-  overflow-y: hidden;
   margin: 0;
   padding: 0;
   background: #008080;
@@ -16,6 +13,8 @@
 
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "win95", Arial, sans-serif;
   font-size: 12px;
 }

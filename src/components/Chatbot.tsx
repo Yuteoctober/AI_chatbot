@@ -98,24 +98,13 @@ export default function Chatbot() {
   console.log(messages)
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-teal-600 p-2 -mt-1">
-      <div className="w-[100svw] h-[98svh] flex flex-col border-2 border-gray-700 shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]">
+    <div className="flex justify-center items-center w-[100svw] mt-[1px]">
+      <div className="w-[99.5svw] h-[99.5svh] flex flex-col border-2 border-gray-700 shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]">
         {/* Windows 95 Title Bar */}
         <div className="flex items-center  bg-[#000080] text-white px-1 py-0.5">
           <div className="flex items-center gap-1">
             <Computer className="h-4 w-4" />
             <span className="font-bold text-sm tracking-tight">AI Assistant Wins95.exe</span>
-          </div>
-          <div className="ml-auto flex">
-            <button className="border-t-2 w-[19px] border-l-2 border-r border-b border-t-gray-200 border-l-gray-200 border-r-gray-700 border-b-gray-700 bg-[#c0c0c0] px-1 text-black text-xs mr-1">
-              <span className="relative font-bold bottom-[1px]">_</span>
-            </button>
-            <button className="border-t-2 w-[18px] border-l-2 border-r border-b border-t-gray-200 border-l-gray-200 border-r-gray-700 border-b-gray-700 bg-[#c0c0c0] px-1 text-black text-xs mr-1">
-              <div className="relative right-[2.5px] text-transparent border-solid border-2 border-black w-[12px] h-[12px]"></div>
-            </button>
-            <button className="border-t-2 w-[18px] border-l-2 border-r border-b border-t-gray-200 border-l-gray-200 border-r-gray-700 border-b-gray-700 bg-[#c0c0c0] px-1 text-black text-xs">
-              <span className="absolute font-bolde right-[0.96rem] top-[2px] text-gray-900 text-[24px]">×</span>
-            </button>
           </div>
         </div>
 
