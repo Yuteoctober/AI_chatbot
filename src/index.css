@@ -5,10 +5,7 @@
   src: url('../src/assets/win95.ttf') format('truetype');
 }
 
-#root{
-  margin: 0px;
-  padding: 0px;
-}
+
 
 html {
   margin: 0;
@@ -64,3 +61,8 @@ body {
     transform: translateY(-12px);
   }
 }
+ #root {
+  padding: 0.01px;
+  margin: 0.01px;
+  overflow: hidden;
+ }
