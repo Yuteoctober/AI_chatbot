@@ -1,6 +1,6 @@
 import type React from "react";
 import { useState, useEffect, useRef } from "react";
-import { Computer, Send } from "lucide-react";
+import { Computer } from "lucide-react";
 
 export default function Chatbot() {
   const socket = useRef<WebSocket | null>(null);
@@ -166,7 +166,6 @@ export default function Chatbot() {
                border-b-gray-700 bg-[#c0c0c0] hover:bg-[#d0d0d0] active:border-t-gray-700 active:border-l-gray-700 active:border-r-gray-200 active:border-b-gray-200`}
             >
               Send
-              {/* <Send className="h-4 w-4" /> */}
             </button>
           </div>
           <div className="text-xs text-center mt-1">AI may make mistakes. Please use with discretion.</div>
