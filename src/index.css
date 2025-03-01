@@ -61,8 +61,3 @@ body {
     transform: translateY(-12px);
   }
 }
- #root {
-  padding: 0.01px;
-  margin: 0.01px;
-  overflow: hidden;
- }
