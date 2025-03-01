@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/AI_Chatbot/"
+  base: "https://yuteoctober.github.io/AI_chatbot/",
 })
