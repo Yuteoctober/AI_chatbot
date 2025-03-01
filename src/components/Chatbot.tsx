@@ -50,7 +50,7 @@ export default function Chatbot() {
     const maxRetries = 10;
 
     const connectWebSocket = () => {
-      socket.current = new WebSocket("http://localhost:8080"); // still hosting on local server!
+      socket.current = new WebSocket("wss://ai-tweet-bot.onrender.com/"); 
 
       socket.current.onopen = () => {
         retryCount = 0;
