@@ -165,7 +165,8 @@ export default function Chatbot() {
               ml-2 px-3 py-1 border-t-2 border-l-2 border-r border-b border-t-gray-200 border-l-gray-200 border-r-gray-700
                border-b-gray-700 bg-[#c0c0c0] hover:bg-[#d0d0d0] active:border-t-gray-700 active:border-l-gray-700 active:border-r-gray-200 active:border-b-gray-200`}
             >
-              <Send className="h-4 w-4" />
+              Send
+              {/* <Send className="h-4 w-4" /> */}
             </button>
           </div>
           <div className="text-xs text-center mt-1">AI may make mistakes. Please use with discretion.</div>

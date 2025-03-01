@@ -5,6 +5,13 @@
   src: url('../src/assets/win95.ttf') format('truetype');
 }
 
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
 
 
 html {
