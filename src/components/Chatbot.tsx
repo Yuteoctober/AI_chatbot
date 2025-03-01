@@ -6,7 +6,8 @@ export default function Chatbot() {
   const socket = useRef<WebSocket | null>(null);
   const endOfMessagesRef = useRef<HTMLDivElement | null>(null);
   const [loading, setLoading] = useState<boolean>(false)
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState<string>("");
+  const [connect, setConnect] = useState<boolean>(false)
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -51,9 +52,11 @@ export default function Chatbot() {
 
     const connectWebSocket = () => {
       socket.current = new WebSocket("wss://ai-tweet-bot.onrender.com/"); 
+      
 
       socket.current.onopen = () => {
         retryCount = 0;
+        setConnect(true)
       };
 
       socket.current.onmessage = (event) => {
@@ -74,6 +77,7 @@ export default function Chatbot() {
 
       socket.current.onerror = (error) => {
         console.error("WebSocket error:", error);
+        setConnect(false)
       };
 
       socket.current.onclose = () => {
@@ -95,7 +99,6 @@ export default function Chatbot() {
     };
   }, []);
 
-  console.log(messages)
 
   return (
     <div className="flex justify-center items-center w-[100svw] h-[100svh] relative right-[2px] -top-[2px]">
@@ -117,8 +120,10 @@ export default function Chatbot() {
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 relative bg-white p-2 overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200">
-          <div className="flex flex-col gap-4 text-start">
+        <div className="chat_container flex-1 relative bg-white p-2 overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col gap-4 text-start touch-auto">
             {messages.map((message, index) => (
               <div key={index} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
@@ -173,8 +178,8 @@ export default function Chatbot() {
 
         {/* Status Bar */}
         <div className="bg-[#c0c0c0] border-t border-t-gray-200 flex items-center px-2 py-0.5 text-xs">
-          <div className="border border-t-gray-700 border-l-gray-700 border-r-gray-200 border-b-gray-200 px-1 mr-2">
-            Ready
+          <div className={`${connect ? 'bg-green-500 text-white' : 'bg-red-500'} border border-t-gray-700 border-l-gray-700 border-r-gray-200 border-b-gray-200 px-1 mr-2`}>
+            {connect ? 'Online' : 'Offline'}
           </div>
           <div>Windows 95 AI Assistant v1.0</div>
         </div>
