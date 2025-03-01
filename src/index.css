@@ -5,7 +5,12 @@
   src: url('../src/assets/win95.ttf') format('truetype');
 }
 
-#root, html {
+#root{
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
   margin: 0;
   padding: 0;
   background: #008080;

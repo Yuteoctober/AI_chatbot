@@ -117,12 +117,12 @@ export default function Chatbot() {
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 bg-white p-2 overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200">
+        <div className="flex-1 relative bg-white p-2 overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200">
           <div className="flex flex-col gap-4 text-start">
             {messages.map((message, index) => (
               <div key={index} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`max-w-[80%] ${message.role === "user" ? "bg-[#c3c3c3]" : "bg-[#ececec]"} p-2 rounded border-t border-l border-r-2 border-b-2 ${message.role === "user" ? "border-t-gray-200 border-l-gray-200 border-r-gray-700 border-b-gray-700" : "border-t-gray-700 border-l-gray-700 border-r-gray-200 border-b-gray-200"}`}
+                  className={`max-w-[80%] ${message.role === "user" ? "bg-[#c3c3c3]" : "bg-[#ececec]"} p-2 border-t-2 border-2 border-r-2 border-b-2 ${message.role === "user" ? "border-t-gray-200 border-l-gray-200 border-r-gray-700 border-b-gray-400" : "border-t-gray-700 border-l-gray-700 border-r-gray-300 border-b-gray-300"}`}
                 >
                   {message.role === "assistant" && (
                     <div className="flex items-center mb-1">
