@@ -1,6 +1,6 @@
 import type React from "react";
 import { useState, useEffect, useRef } from "react";
-// import { Computer, Send } from "lucide-react";
+import { Computer, Send } from "lucide-react";
 
 export default function Chatbot() {
   const socket = useRef<WebSocket | null>(null);
@@ -50,7 +50,7 @@ export default function Chatbot() {
     const maxRetries = 10;
 
     const connectWebSocket = () => {
-      socket.current = new WebSocket("ws://localhost:8080"); // still hosting on local server!
+      socket.current = new WebSocket("http://localhost:8080"); // still hosting on local server!
 
       socket.current.onopen = () => {
         retryCount = 0;
@@ -103,7 +103,7 @@ export default function Chatbot() {
         {/* Windows 95 Title Bar */}
         <div className="flex items-center  bg-[#000080] text-white px-1 py-0.5">
           <div className="flex items-center gap-1">
-            {/* <Computer className="h-4 w-4" />*/}
+            <Computer className="h-4 w-4" />
             <span className="font-bold text-sm tracking-tight">AI Assistant Wins95.exe</span>
           </div>
           <div className="ml-auto flex">
@@ -137,7 +137,7 @@ export default function Chatbot() {
                 >
                   {message.role === "assistant" && (
                     <div className="flex items-center mb-1">
-                      {/* <Computer className="h-4 w-4 mr-1" /> */}
+                      <Computer className="h-4 w-4 mr-1" />
                       <span className="font-bold text-xs">AI Assistant</span>
                     </div>
                   )}
@@ -176,7 +176,7 @@ export default function Chatbot() {
               ml-2 px-3 py-1 border-t-2 border-l-2 border-r border-b border-t-gray-200 border-l-gray-200 border-r-gray-700
                border-b-gray-700 bg-[#c0c0c0] hover:bg-[#d0d0d0] active:border-t-gray-700 active:border-l-gray-700 active:border-r-gray-200 active:border-b-gray-200`}
             >
-              {/* <Send className="h-4 w-4" /> */}
+              <Send className="h-4 w-4" />
             </button>
           </div>
           <div className="text-xs text-center mt-1">AI may make mistakes. Please use with discretion.</div>
