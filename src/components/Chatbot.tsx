@@ -40,11 +40,11 @@ export default function Chatbot() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-
-    if(loading)return; // if AI is still processing, dont allow resend
-
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
+
+      if(loading)return; // if AI is still processing, dont allow resend
+      
       handleSendMessage();
     }
   };
