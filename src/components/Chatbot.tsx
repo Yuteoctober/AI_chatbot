@@ -54,7 +54,7 @@ export default function Chatbot() {
     const maxRetries = 10;
 
     const connectWebSocket = () => {
-      socket.current = new WebSocket("wss://ai-tweet-bot.onrender.com/"); 
+      socket.current = new WebSocket("wss://ai-tweet-bot-gnie.onrender.com/"); 
       
 
       socket.current.onopen = () => {
