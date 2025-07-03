@@ -107,20 +107,21 @@ export default function Chatbot() {
     <div className="flex justify-center items-center w-[100svw] h-[100svh] relative">
       <div className="w-full h-full flex flex-col">
         {/* Windows 95 Title Bar */}
-        <div className="flex items-center  bg-[#000080] text-white px-1 py-0.5">
+
+        {/* <div className="flex items-center  bg-[#000080] text-white px-1 py-0.5">
           <div className="flex items-center gap-1">
             <Computer className="h-4 w-4" />
             <span className="font-bold text-sm tracking-tight">AI Assistant Wins95.exe</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Menu Bar */}
-        <div className="flex bg-[#c0c0c0] border-b border-gray-700 text-xs">
+        {/* <div className="flex bg-[#c0c0c0] border-b border-gray-700 text-xs">
           <button className="px-2 py-0.5 hover:bg-[#000080] hover:text-white">File</button>
           <button className="px-2 py-0.5 hover:bg-[#000080] hover:text-white">Edit</button>
           <button className="px-2 py-0.5 hover:bg-[#000080] hover:text-white">View</button>
           <button className="px-2 py-0.5 hover:bg-[#000080] hover:text-white">Help</button>
-        </div>
+        </div> */}
 
         {/* Chat Container */}
         <div className="chat_container flex-1 relative bg-white p-2 overflow-x-hidden overflow-y-auto h-[400px] border-t border-l border-t-gray-200 border-l-gray-200"
